@@ -1,0 +1,40 @@
+import java.util.List;
+
+public class Stack {
+	public List<Position> positions;
+	public int stackID;
+	
+	public Stack (int stackID){
+		this.stackID = stackID;
+	}
+	
+	public void addPosition(Position p) {
+		positions.add(p);
+	}
+	
+	public List<Position> getPositions() {
+		return positions;
+	}
+	
+	public int getStackID () {
+		return stackID;
+	}
+	
+	public int getNrPositions() {
+		return positions.size();
+	}
+	
+	public Position getFirstPos() {
+		if (positions == null) {
+			return null;
+		}
+		return positions.get(0);
+	}
+	
+	public Position getLastPos() {
+		if (positions == null) {
+			return null;
+		}
+		return positions.get(getNrPositions() - 1);
+	}
+}
